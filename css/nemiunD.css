@@ -1,0 +1,351 @@
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root{
+    --white30: white;
+    --white20: #B8C1EC;
+    --white10: #3A3539;
+    --textcolor: #545454;
+}
+
+body{
+    color: black;
+    /* font-family: charter; */
+    font-family: 'Rubik', sans-serif;
+    background: white;
+    margin: 0;
+    /* margin-inline: ;
+    margin-block: ; */
+    
+}
+
+a{
+    color: var(--white30);
+}
+.header{
+    /* position: sticky;
+    inset-block-start: -45px; */
+}
+
+.header-content{
+    /* position: relative;
+    inset-block-start: 65px; */
+    padding-inline: 20px ;
+}
+header{
+    font-size: 14px;
+    color: var(--white);
+    margin-block-start: 20px;
+ 
+    /* top */
+    /* inset-block-start: 0; */
+    /* bottom */
+    /* inset-block-end: ; */
+    /* left  */
+    /* inset-inline-start: -208px ; */
+    /* right */
+    /* inset-inline-end: ; */
+    /* inline-size: 188px; */
+}
+
+header li{
+    color: var(--textcolor);
+    margin-block-end: 16px;
+}
+
+header a{
+    color: var(--textcolor);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #B8C1EC;
+}
+
+nav details summary{
+    font-weight: bold;
+}
+
+/* h1, h2, h3{
+    font-weight: normal;
+
+} */
+
+h1{
+  
+    font-size: 40px;
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+   
+}
+
+h2{
+    font-size: 2em;
+    margin-block-start: 40px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+hr{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);;
+}
+
+pre{
+    /* background: var(--white10); */
+    padding: 40px;
+    overflow: auto;
+    border-radius: 8px;
+    /* border: 10px solid #5551FF; */
+    /* box-shadow: -10px 10px 0 0 #ABAAF6; */
+    margin-block-end: 30px;
+    color: #FFFFFE;
+}
+
+p{
+    color: var(--textcolor);
+}
+
+.hero{
+    background-image: url('../images/backgroung.png');
+    /* background: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url('../images/patron-2.png'); */
+    /* background-color: #232946; */
+    /* background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%); */
+    /* background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../images/patron.png'); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* block-size: 24px; */
+    block-size: 96px;
+}
+
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+
+.section-content{
+    counter-reset: titleList;
+}
+
+.section-content h3{
+    counter-increment: titleList;
+}
+
+.section-content h3::before{
+    content: counter(titleList, decimal)'. ';
+}
+/* .section-content h3::after{
+    content: '' ;
+    width: 32px;
+    height: 4px;
+    background: var(--white30);
+    display: inline-block;
+} */
+
+blockquote{
+    margin-block-start: 80px;
+    margin-block-end: 80px;
+    background-color: #D4939D;
+    border-radius: 8px;
+    padding: 24px;
+    line-height: 32px;
+    font-size: 24px;
+}
+blockquote p{
+    color: #232946;
+
+}
+
+.main hr{
+    display: none;
+}
+
+.main{
+    /* padding: 10px; */
+    text-align: center;
+}
+
+.wrapper{
+  max-inline-size: 903px;
+  /* block-size: 100px; */
+  /* margin: auto; */
+  margin-inline-start: 116px;
+}
+
+.main-content{
+    /* padding-inline: 16px; */
+}
+
+/* ::selection{
+    background: red;
+} */
+
+
+.slider{
+    /* border: 1px solid red; */
+}
+
+.slider-container{
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video{
+    margin: 0;
+   
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    border-radius: 50%;
+    background-color: white;
+    margin-inline: 8px;
+    cursor: pointer;
+}
+
+.form input{
+    inline-size: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--white30);
+    background: #251F24;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"]{
+    background: #EEBBC3;
+    border: none;
+    color: #232946;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form input::-webkit-input-placeholder{
+    color: var(--textcolor);
+}
+
+.summary-text{
+    margin-block-end: 24px;
+}
+
+.summary-text::marker{
+    content: "";
+}
+
+.menu-proyectos{
+    padding-inline-start: 0;
+}
+
+.menu-proyectos li{
+    list-style-type: none;
+   
+    display: flex;
+    align-items: center;
+    padding-inline-start: 8px;
+    margin-block-end: 16px;
+}
+
+.active{
+    height: 40px;
+    background-color: black;
+    border-radius: 4px;
+
+}
+
+h4{
+    margin-block-start: 40px;
+    margin-block-end: 24px;
+}
+
+.color-text{
+    color: #B8C1EC;
+}
+
+@media screen and (min-width: 1366px) {
+
+    .hero{
+        block-size: 350px;
+    }
+
+    .header{
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    
+    .header-content{
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+    header{
+        /* position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px ;
+        inline-size: 188px; */
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: -251px;
+        inline-size: 241px;
+    }
+    
+    h1{
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+    
+    .main-content{
+        block-size: 636px;
+    }
+    
+}
